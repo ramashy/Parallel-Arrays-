@@ -1,0 +1,42 @@
+/*
+Developer : Shyanaka Rama
+Parallel Array Demostration
+*/
+#include <iostream>
+using namespace std;
+void getinput();
+void calculate();
+
+const int employee = 5;
+int hours[employee];
+int rate [employee];
+
+
+int main ()
+{
+    getinput();
+    calculate();
+    return 0;
+}
+void getinput()
+{
+    cout<<"Please enter five employees working hours and their pay rate"<<endl;
+    cout<<"____________________________________________________________\n"<<endl;
+    for(int count = 1; count <= employee;count++)
+    {
+        cout<<"Employee "<<count<<" working hours : ";
+        cin >> hours[count];
+        cout<<"Employee "<<count<<" pay rate : ";
+        cin >> rate[count];
+    }
+}
+void calculate()
+{
+    for(int count = 1; count <= employee;count++)
+    {
+        cout << "Employee "<<count<<" Salary : ";
+        cout << hours[count] * rate[count];
+        cout << endl;
+    }
+ 
+}
